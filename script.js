@@ -7,6 +7,24 @@ const coinList = document.getElementById("coin-list");
 
 coins.forEach(function (coin) {
   const li = document.createElement("li");
-  li.textContent = coin.name + " / " + coin.price + "원 / " + coin.change + "%";
+
+  const name = document.createElement("span");
+  name.textContent = coin.name;
+
+  const price = document.createElement("span");
+  price.textContent = coin.price.toLocaleString("ko-KR") + "원";
+
+  const change = document.createElement("span");
+  change.textContent = coin.change + "%";
+
+  if (coin.change > 0) {
+    change.classList.add("up");
+  } else if (coin.change < 0) {
+    change.classList.add("down");
+  }
+
+  li.appendChild(name);
+  li.appendChild(price);
+  li.appendChild(change);
   coinList.appendChild(li);
 });
