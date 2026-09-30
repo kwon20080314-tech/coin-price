@@ -13,7 +13,7 @@ HTML, CSS, JavaScript만 사용함.
 # 실행 방법
 
 1. 폴더를 내려받음.
-2. `index.html`을 브라우저로 엶. (필수 기능은 이것만으로 동작함)
+2. `index.html`을 브라우저로 엶.
 3. 도전 기능(API 사용)은 VS Code의 Live Server 확장으로 실행함.
    `index.html` 우클릭 → "Open with Live Server"를 선택함.
 
